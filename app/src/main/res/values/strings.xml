@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MADFallE</string>
+    <string name="course_bscs">BSCS</string>
+    <string name="course_bsit">BSIT</string>
+    <string name="course_bsse">BSSE</string>
+    <string name="university_logo">University Logo</string>
+</resources>
