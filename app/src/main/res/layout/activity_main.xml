@@ -14,85 +14,39 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/number1"
+            android:id="@+id/Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:importantForAutofill="no"
-            android:inputType="number"
+            android:inputType="textEmailAddress"
             android:minHeight="48dp"
-            android:hint="Enter number"
-            android:maxLength="5"/>
+            android:autofillHints="emailAddress"
+            android:hint="Enter Email"
+            android:maxLength="25"/>
+
 
         <EditText
-            android:id="@+id/number2"
+            android:id="@+id/Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:minHeight="48dp"
-            android:hint="Enter number"
-            android:autofillHints="no"
+            android:hint="Enter Password"
+            android:autofillHints="password"
             android:inputType="number"
-            android:maxLength="5"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-        <Button
-            android:id="@+id/plus"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="10dp"
-            android:text="+"
-            android:textSize="16dp"/>
-            <Button
-            android:id="@+id/minus"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="10dp"
-            android:text="-"
-            android:textSize="16dp"    />
-            <Button
-            android:id="@+id/divide"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="10dp"
-            android:text="/"
-            android:textSize="16dp"    />
-            <Button
-            android:id="@+id/multiply"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="10dp"
-            android:text="*"
-            android:textSize="16dp"   />
-        </LinearLayout>
-        <TextView
-            android:id="@+id/result"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Result: "
-            android:textSize="32dp"
-            android:background="@color/golden"
-            android:textColor="@color/black"
-            android:layout_margin="20dp"
-            />
+            android:maxLength="15"/>
     </LinearLayout>
 
     <Button
         android:id="@+id/btn_navigate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:text="Log In" />
 
 </RelativeLayout>

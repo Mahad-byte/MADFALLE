@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "373418091897",
+    "project_id": "madfalle",
+    "storage_bucket": "madfalle.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373418091897:android:89ca4ce1f84f5abd0a7ba8",
+        "android_client_info": {
+          "package_name": "com.mahad.madfalle"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmCoxu0bp18mKsVDlwYW_1-xpIgheQ_60"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/LogoName"
+    android:background="#fbf3e4">
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/logo"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        android:contentDescription="Logo" />
+    <TextView
+        android:id="@+id/uni_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UCP"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_studentContent"
+    android:orientation="horizontal">
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll2"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Name"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:id="@+id/StudentName"
+        android:layout_marginStart="10dp"
+        android:textColor="#9e0909"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Farrukh Ehsan"
+        android:textSize="20sp"
+        android:id="@+id/Name"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#9e0909"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Email"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:id="@+id/StudentEmail"
+        android:layout_marginStart="10dp"
+        android:textColor="#9e0909"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="farrukh@ucp.edu.pk"
+        android:textSize="20sp"
+        android:maxLength="18"
+        android:id="@+id/email"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#9e0909"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student ID"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:id="@+id/StudentID"
+        android:layout_marginStart="10dp"
+        android:textColor="#9e0909"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="L1F21BSCS0000"
+        android:textSize="20sp"
+        android:id="@+id/ID"
+        android:layout_marginStart="10dp"
+        android:textColor="#9e0909"/>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ll_studentImage"
+        android:orientation="vertical">
+    <ImageView
+        android:layout_width="220dp"
+        android:layout_height="180dp"
+        android:id="@+id/studentImage"
+        android:src="@drawable/sir"
+        android:layout_gravity="end"
+        android:paddingBottom="0dp"/>
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

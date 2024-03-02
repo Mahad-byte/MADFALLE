@@ -4,74 +4,54 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var result: TextView
-    private lateinit var num1: EditText
-    private lateinit var num2: EditText
+    private lateinit var email: EditText
+    private lateinit var pass: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        num1 = findViewById(R.id.number1)
-        num2 = findViewById(R.id.number2)
-        result = findViewById(R.id.result)
+        email = findViewById(R.id.Email)
+        pass = findViewById(R.id.Password)
 
-        val buttons = listOf<Button>(
-            findViewById(R.id.plus),
-            findViewById(R.id.minus),
-            findViewById(R.id.divide),
-            findViewById(R.id.multiply)
+        val btn_check: Button = findViewById(R.id.btn_navigate)
+
+        val database_email = listOf(
+            "L1F21BSCS0533@gmail.com",
+            "L1F21BSCS1234@gmail.com",
+            "L1F21BSCS0520@gmail.com",
+            "L1F21BSCS0503@gmail.com",
+            "L1F21BSCS1099@gmail.com"
+        )
+        val database_pass = listOf(
+            "123",
+            "1234",
+            "12345",
+            "123456",
+            "1234567"
         )
 
-//        val rnum1 = num1.text.toString().toInt()          App doesn't opens
-//        val rrnum2 = num2.text.toString().toInt()
-
-        val nav:Button = findViewById(R.id.btn_navigate)
-        nav.setOnClickListener {
-            startActivity(Intent(this,calculator::class.java))
-        }
-
-        buttons.forEach { button ->
-            button.setOnClickListener {
-                if (num1.text.toString().isNotEmpty() && num2.text.toString().isNotEmpty()) {
-                    val rnum1 = num1.text.toString().toInt()
-                    val rrnum2 = num2.text.toString().toInt()
-                    try {
-                        when (button) {
-                            buttons[0] -> {
-
-                                val rresult = rnum1 + rrnum2
-                                result.text = rresult.toString()
-
-                            }
-
-                            buttons[1] -> {
-                                val rresult: Int = rnum1 - rrnum2
-                                result.text = rresult.toString()
-                            }
-
-                            buttons[2] -> {
-                                val rresult: Int = rnum1 / rrnum2
-                                result.text = rresult.toString()
-                            }
-
-                            buttons[3] -> {
-                                val rresult: Int = rnum1 * rrnum2
-                                result.text = rresult.toString()
-                            }
-                        }
-                    } catch (e: Exception) {
-                        Toast.makeText(this, "An error occurred", Toast.LENGTH_SHORT)
+        btn_check.setOnClickListener {
+            try {
+                if (database_email.contains(email.text.toString()) && database_pass.contains(pass.text.toString())) {
+                    if(database_email.indexOf(email.text.toString()) == database_pass.indexOf(pass.text.toString())) {
+                        startActivity(Intent(this, calculator::class.java))
+                    }
+                    else{
+                        Toast.makeText(this, "Wrong Password", Toast.LENGTH_SHORT)
                             .show()
                     }
                 }
-                else{
-                    Toast.makeText(this, "An error occurred", Toast.LENGTH_SHORT).show()
+                else {
+                    Toast.makeText(this, "No Email Found", Toast.LENGTH_SHORT)
+                        .show()
                 }
+            }catch (e: Exception){
+                Toast.makeText(this, "An Error Occurred", Toast.LENGTH_SHORT)
+                    .show()
             }
         }
     }

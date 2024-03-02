@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -13,10 +17,43 @@
         android:theme="@style/Theme.MADFALLE"
         tools:targetApi="31">
         <activity
-            android:name=".calculator"
+            android:name=".BR.BRActivity"
+            android:exported="false" />
+        <!-- <activity -->
+        <!-- android:name=".Fragments.DynamicFragmentActivity" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".Fragments.StaticFragmentActivity" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".servicesAssignment.SRVActivity" -->
+        <!-- android:exported="false" /> -->
+        <service android:name=".Services.MyService" />
+        <service android:name=".servicesAssignment.Service" /> <!-- <activity -->
+        <!-- android:name=".Services.ServiceActivity" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name=".RVFirebase.UpdateActivity"
             android:exported="false" />
         <activity
+            android:name=".Firebase.FireStoreActivity"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".RoomDatabase.RecyclerRoom" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".CameraAPP" -->
+        <!-- android:exported="false" /> -->
+        <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".adapter"
+            android:exported="false" />
+        <activity
+            android:name=".RecylcerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Fragments.DynamicFragmentActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
